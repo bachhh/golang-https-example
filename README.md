@@ -132,11 +132,10 @@ There are two possible solutions.
     ```
 
     Using `openssl x509 -in server.crt -text -noout` to look at the **Subject**
-    line should show **CN=** matching the name of the server. `localhost` or
-    `*` will work.
+    line should show **CN=localhost** matching the name of the server. `*`  **WILL NOT WORK**.
 
     ```
-            Subject: CN=*
+            Subject: CN=localhost
     ```
 
 2. Add a SAN to the certificate with the IP address of the server.
